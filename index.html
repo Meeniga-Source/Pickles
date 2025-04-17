@@ -1,239 +1,545 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR PICKLES</title>
-    <link rel="shortcut icon" href="images/title.png" width="159px" type="image/x-icon">
-    <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MR PICKLES</title>
+      <link rel="shortcut icon" href="images/title.png" width="159px" type="image/x-icon">
+      <!-- Bootstrap Link -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+      <style>
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+        .contact-section {
+  background: #f9f9f9;
+  padding: 40px;
+  margin-top: 100px;
+  border-radius: 10px;
+        }
+        .contact-section h2 {
+    margin-bottom: 3rem;
+}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.contact-section {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-section h2,
+.contact-section h3,
+.contact-section p,
+.contact-section a {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.contact-section h2 {
+  animation-delay: 0.3s;
+}
+.contact-section h3 {
+  animation-delay: 0.5s;
+}
+.contact-section p,
+.contact-section a {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.credit {
+    display: flex
+;
+    justify-content: space-between;
+    font-family: var(--font6);
+    align-items: center;
+    bottom: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 1rem;
+    outline: 1px solid black;
+    font-size: 1rem;
+    background-color: #f69c3c;
+}
+:root {
+    --font1: "Poppins", sans-serif;
+    --font2: "Roboto", sans-serif;
+    --font3: "Montserrat", sans-serif;
+    --font5: "Berkshire Swash", cursive;
+    --font6: "Bricolage Grotesque", sans-serif;
+    --font7: "Fredericka the Great", cursive;
+    --font8: "Playfair Display", serif;
+    --font9: "Source Sans Pro", sans-serif;
+    --font10: "Space Grotesk", sans-serif;
+    --font4: "Marmelad", sans-serif;
+}
+:root {
+    --clr-primary-5: rgb(255, 157, 46);
+    --clr-primary-10: rgb(255, 214, 163);
+    --clr-black: #222;
+    --transition: all .3s linear;
+    --spacing: .1rem;
+    --radius: .25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+
+.contact-section {
+    max-width: 500px;
+    margin: 100px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+  .home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.home-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+}
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp {
+    background-color: #25D366;
+  }
+
+  .instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+                #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+
+  .icon:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+  .whatsapp-btn:hover {
+    background: #FF8C00;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+}
+  .whatsapp-btn {
+    display: inline-flex
+;
+    align-items: center;
+    background: #cc204b;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.bx-phone:before {
+    content: "\ebb2";
+}
+.contact-person i {
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+.bx {
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.social-media a {
+    display: inline-flex
+;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+  background: #cc204b;
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.bxl-whatsapp:before {
+    content: "\e98a";
+}
+.bxl-instagram-alt:before {
+    content: "\e943";
+}
+.no-underline {
+  text-decoration: none;
+  color: #25D366; /* Optional: WhatsApp green */
+  font-weight: 500;
+}
+.no-underline:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+.contact-person a{
+  text-decoration: none;
+}
+.contact-person i {
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+.contact-person p {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+.container mt-4 img {
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+            </style>
+  </head>
+  <body>
+      <!-- Header Section -->
+      <header>
+        
         <nav class="navbar navbar-expand-lg bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo.png" alt=""  class="d-inline-block align-text-top">
-                    
-                  </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="#shoes">Shoes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="#backpack">Backpak</a>
-                  </li>
-                 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#subscribe">Subscribe</a>
-                  </li>
-                </ul>
-               
-              </div>
-            </div>
-          </nav>
-          <!-- image slider -->
-          <section class="container mt-4">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="row  bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
-                        <div class="col-lg-7">
-                            <h1>Cool Dude Headphone</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
-                            <h1>$420</h1>
-                            <button class="btn btn-danger">Buy Now</button>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row bg-gradient d-flex align-items-center p-5" 
-                    style="background-color:#FEEAE9;">
-                        <div class="col-lg-7">
-                            <h1>X-Box Live Cool </h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
-                            <h1>$350</h1>
-                            <button class="btn btn-danger">Buy Now</button>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
-                        <div class="col-lg-7">
-                            <h1>Sports TV For Your Home</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
-                            <h1>$600</h1>
-                            <button class="btn btn-danger">Buy Now</button>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-          </section>
-    </header>
-    <!-- Main Section -->
-    <main>
-        <!-- Catagories section -->
-       <section> 
-        <div class="container overflow-hidden text-center mt-5">
-            <div class="row gy-5">
-              <div class="col-lg-4">
-                <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(152.07deg, #FF9C35 1.47%, #FFD019 97.17%);">
-                    <h1 class="text-white">Watch</h1>
-                    <img src="images/categories/watch.png" alt="">
-                </div>                
-              </div>
-              <div class="col-lg-4">
-                <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(180deg, #FF589B -0.01%, #FF136F 99.99%);">
-                    <h1 class="text-white">Bag</h1>
-                    <img src="images/categories/bag.png" alt="">
-                </div>                
-              </div>
-              <div class="col-lg-4">
-                <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(170.41deg, #4289FF -10.89%, #3F07F8 92.77%);">
-                    <h1 class="text-white">Shoes</h1>
-                    <img src="images/categories/shoes.png" alt="">
-                </div>                
-              </div>
+          <div class="container">
+              <a class="navbar-brand" href="#">
+                  <img src="images/logo.png" alt="" class="d-inline-block align-text-top">
+                  
+                </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#about">About Us</a>
+                </li>
               
-              
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+              </ul>
+            
             </div>
           </div>
-       </section>
-       <!-- Shoes Section -->
-       <section class="container mt-5" id="shoes">
-        <h2>Shoes</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Red Airmax</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Nike 360</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Supply 350</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-       </section>
-       <!-- Bag Section -->
-       <section class="container mt-5" id="backpack">
-        <h2>Backpack</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Red Airmax</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Nike 360</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-lg h-100">
-                <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Supply 350</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="m-2">
-                  <div class="btn btn btn-warning">Buy Now</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-       </section>   
-       <!-- subscribe section -->
-      <div class="container mt-5 mb-5" id="subscribe">
-        <section style="background-color:#FFF2F1 ; height:455px" class="d-flex justify-content-center align-items-center rounded-3">
-            <div>
-                <h1>LET'S STAY IN TOUCH</h1>
-                <p>Get updates on sales, specials and more</p>
-                <input type="text" placeholder="Enter Your Email">
-                <br>
-                <div class="btn btn btn-warning">SUBMIT</div>
-            </div>
-           </section>
+        </nav>
       </div>
-    </main>
-    <!-- footer section -->
-    <footer class="text-center">
-        <p><small> &copy; 2022 by anwarjahid95</small></p>
-    </footer>
+    </div>
+  </body>
+              </div>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  
+                
+                </div>
+              </div>
+            </nav>
+            
+            <!-- image slider -->
+            <section class="container mt-4">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row  bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
+                          <div class="col-lg-7">
+                              <h1>Andhra Mango Pickle</h1>
+
+                              <div class="price-area"><div class="price h4-style"><span class="current-price theme-money">Rs. 800.00</span></div></div>
+                              <p>This Chicken Pickle Andhra Style is an addictive tongue-blistering concoction of various spices mixed with deep-fried chicken pieces </p>
+                              
+                              <button class="btn btn-danger">Buy Now</button>
+                          </div>
+                          <div class="col-lg-5">
+                              <img src="A-Guide-to-Savithrammas-Exotic-Pickles-and-Spices-1080x540.jpg" alt="Floating" class="floating" class="d-block w-100" alt="...">
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row bg-gradient d-flex align-items-center p-5" 
+                      style="background-color:#FEEAE9;">
+                          <div class="col-lg-7">
+                              <h1>X-Box Live Cool </h1>
+                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
+                              <h1>$350</h1>
+                              <button class="btn btn-danger">Buy Now</button>
+                          </div>
+                          <div class="col-lg-5">
+                              <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
+                          </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
+                          <div class="col-lg-7">
+                              <h1>Sports TV For Your Home</h1>
+                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
+                              <h1>$600</h1>
+                              <button class="btn btn-danger">Buy Now</button>
+                          </div>
+                          <div class="col-lg-5">
+                              <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </section>
+      </header>
+      <!-- Main Section -->
+      <main>
+          <!-- Catagories section -->
+        <section> 
+          <div class="container overflow-hidden text-center mt-5">
+              <div class="row gy-5">
+                <div class="col-lg-4">
+                  <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(152.07deg, #FF9C35 1.47%, #FFD019 97.17%);">
+                      <h1 class="text-white">Veg Pickles</h1>
+                      <img src="images/categories/watch.png" alt="">
+                  </div>                
+                </div>
+                <div class="col-lg-4">
+                  <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(180deg, #FF589B -0.01%, #FF136F 99.99%);">
+                      <h1 class="text-white">Non-Veg Pickles</h1>
+                      <img src="images/categories/bag.png" alt="">
+                  </div>                
+                </div>
+                <div class="col-lg-4">
+                  <div class="p-3 border bg-warning d-flex align-items-center justify-content-between rounded-4" style="background: linear-gradient(170.41deg, #4289FF -10.89%, #3F07F8 92.77%);">
+                      <h1 class="text-white">Pure-Gee</h1>
+                      <img src="images/categories/shoes.png" alt="">
+                  </div>                
+                </div>
+                
+                
+              </div>
+            </div>
+        </section>
+        <!-- Shoes Section -->
+        <section class="container mt-5" id="products">
+          <h2>Products</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Red Airmax</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Nike 360</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Supply 350</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </section>
+        <!-- Bag Section -->
+        <section class="container mt-5" id="about">
+          <h2>About Us</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Red Airmax</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Nike 360</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 shadow-lg h-100">
+                  <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Supply 350</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                  <div class="m-2">
+                    <div class="btn btn btn-warning">Buy Now</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </section>   
+        <!-- contact -->
+        <div style="height: 100px;"></div>
+
+        <div class="col-lg-12 mx-auto text-black text-center">
+        <dev class="contact-section" id="contact">
+          <h2 class="heading" data-sr-id="3" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">Contact <span>Us</span></h2>
+          
+          <div class="contact-info" data-sr-id="10" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+
+            <div class="contact-person">
+              <h3>Rajashekar Reddy</h3>
+              <p><i class="bx bx-phone"></i> +91 9581329581</p>
+              <div class="contact-buttons">
+                <a href="https://wa.me/919581329581" class="whatsapp-btn" target="_blank">
+                  <i class="bx bxl-whatsapp"></i> Chat on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+     
+         
     
+          <div class="contact-email">
+            <p><i class="bx bx-envelope"></i> sspickles8@gmail.com</p>
+            
+            
+          </div>
+          </div>
+        </dev>
+        <div style="height: 100px;"></div>
+        <div class="home-content" data-sr-id="4" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">
+          <h1>MR Pickles</h1>
+          <h3>Connecting to the Taste You Love!</h3>
+          <p>Experience the authentic taste that can bring Your love and tradition.</p>
+  
+          <div class="social-media">
+            <a href="https://wa.me/919581329582" target="_blank" class="no-underline"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://www.instagram.com/sspickles_hm/" class="no-underline"><i class="bx bxl-instagram-alt"></i></a>
+          </div>
+          
+        </div>
+        
+      </main>
+      <!-- footer section -->
+    
+            
+                    <div class="footer-imgs"><img class="img-1" src="https://foodie-abdullahassi.vercel.app/assets/footer-illustration-ba7b744e.png"><div class="footer-line"></div></div>
+                  <div class="credit">Copyright Ⓒ 2025 MR PICKLES. All Rights Reserved.</div>
+    
+      
 
 
-    <!-- Bootstrap JavaScript Link -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+      <!-- Bootstrap JavaScript Link -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      
+  </body>
+  </html>
