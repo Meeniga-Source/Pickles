@@ -4,8 +4,8 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>MR PICKLES</title>
-      <link rel="shortcut icon" href="images/title.png" width="159px" type="image/x-icon">
+      <title>MR FOODS</title>
+      <link rel="shortcut icon" href="mrlogo1.png" width="159px" type="image/x-icon">
       <!-- Bootstrap Link -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -261,10 +261,42 @@ html, body {
     font-size: 1.6rem;
     margin: 0.5rem 0;
 }
-.container mt-4 img {
-    width: 35vw;
-    animation: floatImage 4s ease-in-out infinite;
+.floating {
+  animation:floatUpDown 3s ease-in-out infinite;;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-top: 10px;
 }
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+.d-block {
+  animation:floatUpDown 3s ease-in-out infinite;;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+.navbar-brand img{
+     width: 200px;
+     right: 10px;
+}
+.title{
+  color: #ff4c0b;
+ 
+  text-align: center;
+  align-items: center;
+  
+  
+}
+
             </style>
   </head>
   <body>
@@ -274,7 +306,7 @@ html, body {
         <nav class="navbar navbar-expand-lg bg-light fixed-top">
           <div class="container">
               <a class="navbar-brand" href="#">
-                  <img src="images/logo.png" alt="" class="d-inline-block align-text-top">
+                <h1 class="title">MR FOODS</h1><img src="mrlogo1.png" alt="" class="d-inline-block align-text-top">
                   
                 </a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -304,6 +336,7 @@ html, body {
     </div>
   </body>
               </div>
+              
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   
@@ -314,48 +347,52 @@ html, body {
             
             <!-- image slider -->
             <section class="container mt-4">
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <div class="row  bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
+                      <div class="row bg-gradient d-flex align-items-center p-5" 
+                      style="background-color:#FEEAE9;">
                           <div class="col-lg-7">
-                              <h1>Andhra Mango Pickle</h1>
-
-                              <div class="price-area"><div class="price h4-style"><span class="current-price theme-money">Rs. 800.00</span></div></div>
-                              <p>This Chicken Pickle Andhra Style is an addictive tongue-blistering concoction of various spices mixed with deep-fried chicken pieces </p>
-                              
-                              <button class="btn btn-danger">Buy Now</button>
+                              <h1>Chicken Pickle </h1>
+                              <p>This Chicken Pickle Andhra Style is an addictive tongue-blistering concoction of various spices mixed with deep-fried chicken pieces</p>
+                              <h1>Rs.800/-</h1>
+                              <a href="https://wa.me/919581329581?text=Hi!%20I%20want%20to%20buy%20Chicken%20Pickle"
+               class="btn btn-success"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="event.stopPropagation();">
+               Buy Now
+            </a>
                           </div>
                           <div class="col-lg-5">
-                              <img src="A-Guide-to-Savithrammas-Exotic-Pickles-and-Spices-1080x540.jpg" alt="Floating" class="floating" class="d-block w-100" alt="...">
+                              <img src="Chicken-Pickle-Andhra-Style-V2.jpg" class="d-block w-100" alt="...">
                           </div>
                       </div>
                       
                     </div>
                     <div class="carousel-item">
-                      <div class="row bg-gradient d-flex align-items-center p-5" 
-                      style="background-color:#FEEAE9;">
-                          <div class="col-lg-7">
-                              <h1>X-Box Live Cool </h1>
-                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
-                              <h1>$350</h1>
-                              <button class="btn btn-danger">Buy Now</button>
-                          </div>
-                          <div class="col-lg-5">
-                              <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
-                          </div>
-                      </div>
+                      <div class="row  bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
+                        <div class="col-lg-7">
+                            <h1>Andhra Mango Pickle</h1>
+                            <p>This classic mango pickle definitely transforms your simple meal to a flavorful blessing with its freshness and natural taste of handpicked mangoes.</p>
+                            <h1>Rs.500/-</h1>
+                            <button class="btn btn-danger">Buy Now</button>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src="istockphoto-1316583859-612x612.jpg" alt="Floating" class="floating" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
                     </div>
                     <div class="carousel-item">
                       <div class="row bg-gradient d-flex align-items-center p-5" style="background-color:#FEEAE9;">
                           <div class="col-lg-7">
-                              <h1>Sports TV For Your Home</h1>
-                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, magni dolor. Nulla quibusdam velit sapiente.</p>
-                              <h1>$600</h1>
+                              <h1>Gongura</h1>
+                              <p>This Gongura Pickle is an Andhra style chutney recipe prepared with fresh sorrel leaves, garlic, fenugreek seeds and spices. Serve this Gongura chutney or pachadi with hot rice and ghee for a quick meal.</p>
+                              <h1>Rs.500/-</h1>
                               <button class="btn btn-danger">Buy Now</button>
                           </div>
                           <div class="col-lg-5">
-                              <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
+                              <img src="Gongura-Pickle.jpg" class="d-block w-100" alt="...">
                           </div>
                       </div>
                     </div>
@@ -368,6 +405,7 @@ html, body {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
+              
                 </div>
             </section>
       </header>
@@ -539,7 +577,15 @@ html, body {
 
 
       <!-- Bootstrap JavaScript Link -->
-      <script src="js/bootstrap.bundle.min.js"></script>
+      <script>
+        function openWhatsApp() {
+          const phoneNumber = "919581329581"; // 👈 change to your actual number
+          const message = "Hi! I want to buy Chicken Pickle";
+          const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+          window.open(url, "_blank");
+        }
+      </script>
+      
       
   </body>
   </html>
